@@ -10,7 +10,7 @@ fs.readdir(pathName, { withFileTypes: true }, (err, files) => {
       const ext = path.parse(pathToFile).ext;
       let result = `${name} ${ext} `;
       fs.stat(pathToFile, (err, stats) => {
-        stdout.write(`${result} ${stats.size / 1000}\n `);
+        stdout.write(`${result} ${stats.size / 1000}`);
       });
     }
   });
