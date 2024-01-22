@@ -4,12 +4,12 @@ const pathName = path.join(__dirname, 'files');
 const pathCopy = path.join(__dirname, 'files-copy');
 async function copyDirrection() {
   try {
-    await fs.mkdir(pathCopy, { recursive: true }, (err) => {
+    fs.mkdir(pathCopy, { recursive: true }, (err) => {
       if (err) {
         console.log(err);
       }
     });
-    await fs.readdir(pathName, (err, files) => {
+    fs.readdir(pathName, (err, files) => {
       files.forEach((e) => {
         const filePath = path.join(pathName, e);
         const copyPath = path.join(pathCopy, e);
