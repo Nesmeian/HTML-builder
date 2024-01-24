@@ -1,5 +1,4 @@
 const fs = require('fs').promises;
-const { mkdir } = require('fs');
 const path = require('path');
 
 const projectLocate = path.join(__dirname, 'project-dist');
